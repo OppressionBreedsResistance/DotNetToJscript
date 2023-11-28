@@ -19,7 +19,7 @@ namespace DotNetToJScript.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -139,8 +139,7 @@ namespace DotNetToJScript.Properties {
         ///  ver = &quot;v2.0.50727&quot;
         ///  Err.Clear
         ///End If
-        ///shell.Environment(&quot;Process&quot;).Item(&quot;COMPLUS_Version&quot;) = ver
-        ///.
+        ///shell.Environment(&quot;Process&quot;).Item(&quot;COMPLUS_Version&quot;) = ver.
         /// </summary>
         internal static string vb_multi_auto_version_script {
             get {
@@ -160,14 +159,18 @@ namespace DotNetToJScript.Properties {
         ///End Function
         ///
         ///Function Run()
-        ///    Dim serialized_obj
+        ///    On Error Resume Next
+        ///
+        ///    Dim s As String
         ///    %SERIALIZED%
         ///
         ///    entry_class = &quot;%CLASS%&quot;
         ///
         ///    Dim stm As Object, fmt As Object, al As Object
         ///    Set stm = CreateObject(&quot;System.IO.MemoryStream&quot;)
-        ///    Set fmt = CreateObject(&quot;System.Runtime.Serialization [rest of string was truncated]&quot;;.
+        ///
+        ///    If stm Is Nothing Then
+        ///  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string vba_template {
             get {

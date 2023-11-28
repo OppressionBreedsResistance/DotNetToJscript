@@ -21,14 +21,17 @@ using System.Windows.Forms;
 [ComVisible(true)]
 public class TestClass
 {
-    public TestClass()
-    {
-        MessageBox.Show("Test", "Test", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-    }
 
     public void RunProcess(string path)
     {
         Process.Start(path);
     }
+
+    public void ShowMB()
+    {
+        MessageBox.Show("Witam","Tekst", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        MessageBox.Show("Witam po raz drugi", "Tekst drugi", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+    }
+
 }
 
